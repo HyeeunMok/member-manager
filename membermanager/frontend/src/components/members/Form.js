@@ -21,6 +21,11 @@ class Form extends Component {
     const { name, email, message } = this.state;
     const member = { name, email, message };
     this.props.addMember(member);
+    this.setState({
+      name: '',
+      email: '',
+      message: ''
+    });
   };
 
   render() {
